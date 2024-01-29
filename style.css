@@ -1,6 +1,6 @@
 *{
     box-sizing: border-box;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
 }
 
@@ -12,11 +12,8 @@ ul li{
     position: relative;
     width: 800px;
     height: 300px;
-    background-color: aliceblue;
-    border: 2px solid black;
-    margin-top: 15%;
-    margin-left: 10%;
-    overflow: hidden;
+    border: 3px solid black;
+    /* overflow: hidden; */
 }
 
 .window{
@@ -30,22 +27,6 @@ ul li{
 li{
     width: 800px;
     height: 300px;
-}
-
-.window > li:nth-child(1){
-    background-color: aquamarine;
-}
-
-.window > li:nth-child(2){
-    background-color: aqua;
-}
-
-.window > li:nth-child(3){
-    background-color: pink;
-}
-
-.window > li:nth-child(4){
-    background-color: aquamarine;
 }
 
 @keyframes window{
