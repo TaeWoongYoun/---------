@@ -9,51 +9,63 @@ ul li{
 }
 
 .slide{
+    /* ul이 위치하게 부모요소로 설정 */
     position: relative;
+    /* 보이는 화면의 가로 크기 */
     width: 800px;
+    /* 보이는 화면의 세로 크기 */
     height: 300px;
-    border: 3px solid black;
-    /* overflow: hidden; */
+    /* 이 영역을 벗어나는 나머지 요소들을 안 보이게 처리함 */
+    overflow: hidden;
 }
 
 .window{
+    /* 부모요소 위치로 부착시킴 (자식요소) */
     position: absolute;
+    /* li 네개를 포함시킬 사이즈 800*4==3200 */
     width: 3200px;
+    /* 가로 슬라이드라서 세로 영역은 그대로 냅둬도 됨 */
     height: 300px;
+    /* 애니메이션을 5초동안(5s) 무한으로(infinite) 일정속도로(linear) window는 애니메이션 이름 */
     animation: 5s infinite linear window;
+    /* li들 가로로 정렬 */
     display: flex;
 }
 
 li{
+    /* li크기 정의 */
     width: 800px;
     height: 300px;
 }
 
+/* window는 위에서 정의한 이름이랑 같게 설정 */
 @keyframes window{
+    /* 처음엔 가만히 있고 */
     0%{
         left: 0%;
     }
-
+    /* 23%때까지 가만히 있다가 */
     23%{
         left: 0%;
     }
-
+    /* 23%에서 33%로 넘어가는 사이에 왼쪽으로 -800px 이동시킴 */
     33%{
         left: -800px;
     }
-
+    /* 56%까지 가만히 있다가 */
     56%{
         left: -800px;
     }
-
+    /* 23%에서 33%로 넘어가는 사이에 왼쪽으로 -800px 이동시킴 
+    ul 기준으로 이동하는거라 총 -1600px 이동*/
     66%{
         left: -1600px;
     }
-
+    /* 90%까지 또 가만히 있다가 */
     90%{
         left: -1600px;
     }
-
+    /* 90%에서 100%로 넘어갈 때 ul을 또 왼쪽으로 -2400px 이동시킴 */
     100%{
         left: -2400px;
     }
