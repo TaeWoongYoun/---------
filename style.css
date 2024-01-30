@@ -4,6 +4,7 @@
     padding: 0;
 }
 
+    /* li의 왼쪽 점을 없애줘야 슬라이드가 여백 없이 작동*/
 ul li{
     list-style: none;
 }
